@@ -1,9 +1,0 @@
-forward
-left (90°)
-forward
-left (90°)
-forward
-right (90°)
-forward
-right (90°)
-forward
