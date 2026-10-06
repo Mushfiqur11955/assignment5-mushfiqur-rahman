@@ -78,16 +78,36 @@ def reverse():
     sleep(2)       
     stop()
 
-forward()
-turn_left()
-forward()
-turn_left()
-forward()
-turn_right()
-forward()
-turn_right()
-forward()
-turn_180()
-reverse()
+# now its time for abide commands
+# Read movement instructions from file
+with open("commands.txt", "r") as file:
+    commands = file.readlines()
 
-stop()
+# Follow the commands
+for command in commands:
+
+    command = command.strip()
+
+    if command == "forward":
+        forward()
+
+    elif command == "left":
+        turn_left()
+
+    elif command == "right":
+        turn_right()
+
+    elif command == "backward":
+        backward()
+
+    elif command == "180":
+        turn_180()
+
+    elif command == "stop":
+        stop()
+
+    else:
+        print("Unknown command:", command)
+
+# final stop
+stop() 
