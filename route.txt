@@ -1,0 +1,9 @@
+forward
+right
+forward
+right
+forward
+left
+forward
+left
+forward
